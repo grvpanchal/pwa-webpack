@@ -1,15 +1,15 @@
 {
-    "short_name": "FirstVuePWA",
-    "name": "First Vue PWA App",
+    "short_name": "pwa-webpack",
+    "name": "PWA Wabpack",
     "icons": [
       {
-        "src": "/192.png",
-        "type": "img/png",
+        "src": "img/192.png",
+        "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/512.png",
-        "type": "img/png",
+        "src": "img/512.png",
+        "type": "image/png",
         "sizes": "512x512"
       }
     ],

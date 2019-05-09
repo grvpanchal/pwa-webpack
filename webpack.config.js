@@ -25,6 +25,7 @@ module.exports = (env, argv) => ({
   resolve: {
     extensions: [
       '.js',
+      '.png',
       '.json'
     ],
     alias: {
@@ -72,7 +73,7 @@ module.exports = (env, argv) => ({
     https: {
       key: fs.readFileSync('./localhost-key.pem'),
       cert: fs.readFileSync('./localhost.pem'),
-      ca: fs.readFileSync('/home/gaurav/.local/share/mkcert/rootCA.pem')
+      ca: fs.readFileSync('/Users/sonalikochar/Library/Application Support/mkcert/rootCA.pem')
     },
     overlay: true,
     port: 443

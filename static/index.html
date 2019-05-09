@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Hello PWA!</title>
+    <meta name="Description" content="First PWA Vue.js App">
+</head>
+
+<body>
+    <noscript>To run this application, JavaScript is required to be enabled.</noscript>
+    <div id="app"></div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+            console.log('SW registered');
+        }
+    </script>
+    <script src="service-worker.js"></script>
+</body>
+
+</html>

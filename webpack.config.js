@@ -70,6 +70,9 @@ module.exports = (env, argv) => ({
   devServer: {
     compress: true,
     host: 'localhost',
+    headers: {
+      "Cache-Control": "public, max-age=31536000"
+    },
     https: {
       key: fs.readFileSync('./localhost-key.pem'),
       cert: fs.readFileSync('./localhost.pem'),

@@ -37,7 +37,7 @@ https: {
 
 Install the modules
 ```sh
-$ npm install
+$ npm -install
 ```
 
 ### STOP ALL LOCAL SERVERS ON PORT 80 AND 443

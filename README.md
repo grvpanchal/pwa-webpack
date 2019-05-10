@@ -11,7 +11,7 @@ This is a blank PWA setup providing 100% result under Chrome Lighthouse audit
 ## Setup
 If you havent already installed mkcert for browser then run
 ```
-mkcert install
+mkcert -install
 ```
 
 Re-open the chrome browser to enable the installed certificates.
@@ -37,7 +37,7 @@ https: {
 
 Install the modules
 ```sh
-$ npm -install
+$ npm install
 ```
 
 ### STOP ALL LOCAL SERVERS ON PORT 80 AND 443

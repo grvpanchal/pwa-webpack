@@ -1,6 +1,6 @@
 {
     "short_name": "pwa-webpack",
-    "name": "PWA Wabpack",
+    "name": "PWA Webpack",
     "icons": [
       {
         "src": "img/192.png",

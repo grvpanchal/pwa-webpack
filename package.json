@@ -6,7 +6,7 @@
     "start": "npm run dev",
     "build": "webpack -p --mode production",
     "build:dev": "webpack -d --mode development",
-    "dev": "concurrently 'node http-server.js' 'webpack-dev-server --progress'",
+    "dev": "concurrently 'node http-server.js 0.0.0.0' 'webpack-dev-server --progress --host 0.0.0.0'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

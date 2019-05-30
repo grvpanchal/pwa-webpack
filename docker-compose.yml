@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  pwa:
+    privileged: true
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /home/gaurav/.local/share/mkcert:/usr/src/app/mkcert
+      - /usr/src/app/node_modules
+    ports:
+      - 0.0.0.0:80:80
+      - 0.0.0.0:443:443
+      - 9229:9229
+    command: npm start

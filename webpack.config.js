@@ -76,7 +76,7 @@ module.exports = (env, argv) => ({
     https: {
       key: fs.readFileSync('./localhost-key.pem'),
       cert: fs.readFileSync('./localhost.pem'),
-      ca: fs.readFileSync('/home/gaurav/.local/share/mkcert/rootCA.pem')
+      ca: fs.readFileSync('mkcert/rootCA.pem')
     },
     overlay: true,
     port: 443

@@ -7,6 +7,7 @@ This is a blank PWA setup providing 100% result under Chrome Lighthouse audit
 
 - nodejs: https://nodejs.org
 - mkcert: https://github.com/FiloSottile/mkcert
+- yarn: ``npm i -g yarn``
 
 ## Setup
 If you havent already installed mkcert for browser then run
@@ -37,14 +38,19 @@ https: {
 
 Install the modules
 ```sh
-$ npm install
+$ yarn install
 ```
 
-### STOP ALL LOCAL SERVERS ON PORT 80 AND 443
+### STOP ALL LOCAL SERVERS ON PORT 80, 8080 AND 443
 
-Start the project
+Start the project with HTTP 2.0
 ```sh
-$ sudo npm start
+$ yarn start
+```
+
+Start the project for PWA Score
+```sh
+$ sudo yarn start:pwa
 ```
 Go to Chrome and open https://localhost with developers tool. Go to Audits tab and hit `Run audits`
 
@@ -52,6 +58,9 @@ Go to Chrome and open https://localhost with developers tool. Go to Audits tab a
 
 ## Final Result
 
-You will see a result similar to below image
+You will see a result similar to below image for HTTP2 `yarn start`
 
 <center><img alt="PWA audit Result" src="screenshots/pwa-audit-result.png"></center>
+
+View the perfect PWA score with `sudo yarn start:pwa`
+<center><img alt="PWA audit Result" src="screenshots/pwa-audit-result-pwa.png"></center>

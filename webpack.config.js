@@ -79,6 +79,5 @@ module.exports = (env, argv) => ({
       ca: fs.readFileSync('/home/gaurav/.local/share/mkcert/rootCA.pem')
     },
     overlay: true,
-    port: 443
   }
 });

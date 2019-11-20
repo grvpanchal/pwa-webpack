@@ -1,9 +1,5 @@
-function component() {
-    const element = document.createElement('div');
-  
-    element.innerHTML = '<h2>This is a PWA config with Webpack</h2>';
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from "./App";
+
+ReactDOM.render( <App/>, document.getElementById('root') );

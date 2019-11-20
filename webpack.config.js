@@ -19,7 +19,20 @@ module.exports = (env, argv) => ({
   node: false,
 
   module: {
-    rules: []
+    rules: [
+      {
+        test: /\.js$/,
+        use: 'babel-loader',
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|j?g|svg|gif)?$/,
+        use: 'file-loader'
+      }
+    ]
   },
 
   resolve: {
@@ -36,11 +49,11 @@ module.exports = (env, argv) => ({
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'static', 'index.html'),
+      template: path.resolve(__dirname, 'public', 'index.html'),
       inject: true
     }),
     new CopyWebpackPlugin([{
-      from: path.resolve(__dirname, 'static'),
+      from: path.resolve(__dirname, 'public'),
       to: path.resolve(__dirname, 'dist'),
       toType: 'dir'
     }])
@@ -69,14 +82,14 @@ module.exports = (env, argv) => ({
 
   devServer: {
     compress: true,
-    host: 'localhost',
+    host: 'pwa.www.1800flowers.com',
     headers: {
       "Cache-Control": "public, max-age=31536000"
     },
     https: {
-      key: fs.readFileSync('./localhost-key.pem'),
-      cert: fs.readFileSync('./localhost.pem'),
-      ca: fs.readFileSync('/home/gaurav/.local/share/mkcert/rootCA.pem')
+      key: fs.readFileSync('./pwa.www.1800flowers.com-key.pem'),
+      cert: fs.readFileSync('./pwa.www.1800flowers.com.pem'),
+      ca: fs.readFileSync('/Users/gaurav/Library/Application Support/mkcert/rootCA.pem')
     },
     overlay: true,
   }

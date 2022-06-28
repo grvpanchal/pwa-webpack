@@ -13,13 +13,17 @@
     <meta name="msapplication-square512x512logo" content="img/512.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="style.css">
     <title>Hello PWA!</title>
     <meta name="Description" content="First PWA Vue.js App">
 </head>
 
 <body>
     <noscript>To run this application, JavaScript is required to be enabled.</noscript>
-    <div id="app"></div>
+    <div id="ckoApplePay" class="apple-pay-button apple-pay-button-text-buy" lang=en></div>
+
+    <!-- Adding an error message to show in case Apple Pay is not possible -->
+    <p style="display:none" id="ckoApplePayError">ApplePay is not available in this environment.</p>
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('service-worker.js');
